@@ -11,11 +11,19 @@ describe 'five_number_summary' do
     expect(five_num(ARRAYODD).last).to equal 49
   end
 
-  it 'the middle number is the median for an odd array' do 
+  it 'the third number is the median for an odd array' do 
     expect(five_num(ARRAYODD)[2]).to equal 40
   end
 
-  it 'the middle number is the median for an even array' do 
+  it 'the third number is the median for an even array' do 
     expect(five_num(ARRAYEVEN)[2]).to equal 3.5
+  end
+
+  it 'the second number is the first quartile for an odd array' do 
+    expect(five_num(ARRAYODD)[1]).to equal 25.5
+  end
+
+  it 'the second number is the first quartile for an even array' do 
+    expect(five_num(ARRAYEVEN)[1]).to equal 2
   end
 end
